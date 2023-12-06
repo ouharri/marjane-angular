@@ -1,0 +1,12 @@
+.password-input {
+  border: 0 !important
+}
+
+.login-btn {
+  background-color: #085da8;
+}
+
+.forgot-password-text {
+  font-size: 15px;
+  font-weight: 600;
+}
