@@ -1,0 +1,52 @@
+<table class="table align-middle mb-0 bg-white container mt-4 mb-4">
+  <thead class="bg-light">
+    <tr>
+      <th>#ID</th>
+      <th>Category</th>
+      <th>Date Debut</th>
+      <th>Date Fin</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let promotion of promotions" >
+      <td>
+        <span>
+          {{promotion.idPr}}
+        </span>
+      </td>
+      <td>
+
+          <p>{{promotion.category}}</p>
+        
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{promotion.dateDebut}}</p>
+        
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{promotion.dateFin}}</p>
+        
+      </td>
+      <td>
+        <span class="badge " [class]="promotion.status=='EnCours'?'bg-warning':(promotion.status=='Refusé'?'bg-danger':'bg-success') ">{{promotion.status}}</span>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center" >
+    <li class="page-item ">
+      <button (click)="Previous($event)" class="page-link"  tabindex="-1">Previous</button>
+    </li>
+
+    
+    <li class="page-item" *ngFor="let in of arr;let i = index  " ><a [ngClass]="{'active': i === 0}"class="page-link pagItem "  (click)="move(i+1,$event)" >{{i+ 1}}</a></li>
+    
+    <li  class="page-item">
+      <button (click)="next($event)" class="page-link" >Next</button>
+    </li>
+  </ul>
+</nav>

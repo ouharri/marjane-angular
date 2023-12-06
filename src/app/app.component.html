@@ -1,0 +1,158 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5 ">
+    <a class="navbar-brand" href="#"><img src="../../../assets/images/logo_marjane.svg" width="100px" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ml-auto "  id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+         
+        <!-- HTML code -->
+    <li class="nav-item">
+      <a class="nav-link" href="#" [class.active]="Home" (click)="change('Home')">Home</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/AdminCenter" class="nav-link" [class.active]="Admin" (click)="change('Admin')" href="#">Admin Center</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/promotion" class="nav-link" [class.active]="Promotion" (click)="change('Promotion')" href="#">Promotions</a>
+    </li>
+
+        
+      </ul>
+    </div>
+  </nav>
+  
+  <router-outlet>
+
+  </router-outlet>
+
+  
+<footer class="bg-body-tertiary text-center mt-5 bg-primary" >
+  <div class="container p-4" >
+    <section class="mb-4">
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+
+          <div class="col-md-5 col-12">
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example24" class="form-control" placeholder="Email Address" />
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="mb-4">
+      <p>
+        Avec l'application Marjane, vous pouvez faire vos achats encore plus rapidement.
+      </p>
+    </section>
+
+    <section class="">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Informations légales</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Engagements Marjane</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">CGU & CGV</a>
+            </li>
+           
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">À propos</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Marjane Groupe</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Recrutment</a>
+            </li>
+           
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Besoin d'aide ?</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Nous Contacter</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">FAQ</a>
+            </li>
+           
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Téléchargez notre appli</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <img  src="../../../assets/images/bre0yhmhgb48c4sc.svg" width="100px" alt="">      
+              <img  src="../../../assets/images/i41gsw8gynksssww.svg" class="mx-3" width="100px" alt="">              </li>
+            <li>
+              <!-- <a class="text-body" href="#!">Link 2</a> -->
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 ">
+            
+      </div>
+
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    ©2023 Marjane - Tous droits réservés - Mentions légales - Données personnelles
+    
+  </div>
+</footer>

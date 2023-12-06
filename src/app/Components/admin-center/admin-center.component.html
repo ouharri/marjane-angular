@@ -1,0 +1,68 @@
+<div class="container">
+  <div class=" text-center mt-5 ">
+    <h1>Add New Promotion</h1>
+  </div>
+
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 ">
+        <div class="card-body ">
+          <div class="container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_name">dateDebut *</label>
+                      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="dateDebut" [(ngModel)]="ACenter.dateDebut">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" class="form-label">dateFin</label>
+                      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="dateFin" [(ngModel)]="ACenter.dateFin">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" class="form-label">status</label>
+                      <select class="form-select" aria-label="Default select example" name="status"
+                        [(ngModel)]="ACenter.status">
+                        <option selected value="Validé">Validé</option>
+                        <option value="Refusé">Refusé</option>
+                        <option value="EnCours">EnCours</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">category</label>
+                        <select class="form-select" aria-label="Default select example" name="category"
+                          [(ngModel)]="ACenter.category.idC">
+                          <option *ngFor="let cat  of Categories" value={{cat.idC}}>{{cat.titre}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="submit" class="btn btn-primary btn-send  pt-2 btn-block w-100" value="Create Promotion">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 mx-auto">
+      <img src="../../../assets/images/Amin-Mod-la-gi-removebg-preview.png" width="100%" alt="">
+    </div>
+  </div>
+</div>
