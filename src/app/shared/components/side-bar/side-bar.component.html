@@ -28,7 +28,7 @@
 
                     <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Crédits</span>
                 </a>
-                <a href="?p=Dashboard&pd=clients" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                <a (click)="navigateTo('/admin/')" [class]="IsOpen ? 'pl-5' : 'px-2'"
                    class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-5 h-5">
@@ -38,7 +38,7 @@
 
                     <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Clients</span>
                 </a>
-                <a href="?p=Dashboard&pd=product" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                <a (click)="navigateTo('/admin/promotion')" [class]="IsOpen ? 'pl-5' : 'px-2'"
                    class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-5 h-5 ">
@@ -48,7 +48,7 @@
 
                     <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Employés</span>
                 </a>
-                <a href="?p=home" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                <a (click)="navigateTo('/admin/')" [class]="IsOpen ? 'pl-5' : 'px-2'"
                    class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-5 h-5">
@@ -59,13 +59,13 @@
                 </a>
             </div>
             <div>
-                <div routerLink="/test" [class]="IsOpen ? 'pl-5' : ''"
+                <div [class]="IsOpen ? 'pl-5' : ''"
                      class="flex items-center mt-5 transition-colors duration-300 transform rounded-lg">
                     <img src="https://avatars.githubusercontent.com/u/112892545" class="w-10 object-cover rounded-full"
                          alt="ouharri">
                     <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Ouharri Outman</span>
                 </div>
-                <a (click)="navigateTo('/test')" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                <a (click)="logout()" [class]="IsOpen ? 'pl-5' : 'px-2'"
                    class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          [class]="IsOpen ? '' : 'stroke-[#ffe804]'" width="24" height="24"

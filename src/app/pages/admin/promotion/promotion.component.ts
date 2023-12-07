@@ -50,25 +50,35 @@ export class PromotionComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getTotalPage();
         this.getAllPromotions();
     }
 
     loopArray = new Array(0);
+    currentPage: number = 1;
     promotions: Promotion[] = []
     totalPage: number = 0;
 
     getAllPromotions() {
-        this.promotion.getAllPromotions(1).subscribe((data: any) => {
+        this.promotion.getAllPromotions(this.currentPage).subscribe((data: any) => {
             this.promotions = data;
-            console.log(this.promotions);
         });
     }
 
-    getPromotionsByPage(page: number) {
-        this.promotion.getAllPromotions(page).subscribe((data: any) => {
+    getPromotionsByPage() {
+        this.promotion.getAllPromotions(this.currentPage).subscribe((data: any) => {
             this.promotions = data;
-            console.log(this.promotions);
         });
+    }
+
+    previousPage() {
+        this.currentPage--;
+        this.getPromotionsByPage();
+    }
+
+    nextPage() {
+        this.currentPage++;
+        this.getPromotionsByPage();
     }
 
     getTotalPage() {
@@ -78,4 +88,8 @@ export class PromotionComponent implements OnInit {
         });
     }
 
+    changePage(param: any) {
+        this.currentPage = param;
+        this.getPromotionsByPage();
+    }
 }

@@ -6,6 +6,7 @@ import {RegisterRequest} from '../model/register-request';
 import {AuthenticationResponse} from '../model/authentication-response';
 import {LoginRequest} from "../model/login-request";
 import {catchError} from 'rxjs/operators';
+import {RoutingService} from "./routing.service";
 
 @Injectable({
     providedIn: 'root',
@@ -13,7 +14,7 @@ import {catchError} from 'rxjs/operators';
 export class AuthenticationService {
     private readonly baseUrl = 'http://localhost:8084/api/v2/auth';
 
-    constructor(private http: HttpClient, private tokenStorage: TokenStorage) {
+    constructor(private http: HttpClient, private tokenStorage: TokenStorage, private router: RoutingService) {
     }
 
     register(request: RegisterRequest): Observable<AuthenticationResponse> {
@@ -22,9 +23,6 @@ export class AuthenticationService {
             request
         );
     }
-
-    //codioum
-
     authenticate(request: LoginRequest): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.http
@@ -42,7 +40,6 @@ export class AuthenticationService {
                 });
         });
     }
-
     getRoles(): string[] {
         return this.tokenStorage.getRoles();
     }
@@ -50,7 +47,6 @@ export class AuthenticationService {
     getPermissions(): string[] {
         return this.tokenStorage.getPermissions();
     }
-
     refreshToken() {
         this.http
             .post<void>(`${this.baseUrl}/refresh-token`, {},
@@ -62,7 +58,6 @@ export class AuthenticationService {
             )
             .subscribe((token) => this.tokenStorage.setToken(token));
     }
-
     isAuthenticated(): Promise<boolean> {
         const token = this.tokenStorage.getAccessToken();
         if (!token) {
@@ -84,5 +79,9 @@ export class AuthenticationService {
                     resolve(true);
                 });
         });
+    }
+    logout(): void {
+        this.tokenStorage.clear();
+        this.router.navigateTo('/login');
     }
 }

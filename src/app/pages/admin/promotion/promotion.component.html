@@ -107,7 +107,7 @@
                       <li>
                         <button
                                 class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                                aria-label="Previous"
+                                aria-label="Previous" (click)="previousPage()"
                         >
                           <svg
                                   class="w-4 h-4 fill-current"
@@ -124,17 +124,23 @@
                       </li>
                       <li>
                         <button
-                                *ngFor="let page of pages"
+                                *ngFor="let page of loopArray; let i = index" (click)="changePage(i + 1)"
                                 class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+                                [class]="currentPage == i + 1 ? 'bg-[#0155a7] text-white' : 'bg-white'"
                         >
-                          1
+                          {{ i + 1 }}
                         </button>
                       </li>
-                      <li>
+                        <li>
                         <button
-                                class="px-3 py-1 text-blue-900 stroke-1 transition-colors duration-150 border border-r-0 border-blue-800 rounded-md focus:outline-none focus:shadow-outline-purple"
+                                class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+                                aria-label="Previous" (click)="nextPage()"
                         >
-                          3
+                            <svg class="w-4 h-4 fill-current"
+                                 aria-hidden="true"
+                                 viewBox="0 0 20 20"
+                            ><path
+                                    d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>
                         </button>
                       </li>
                     </ul>

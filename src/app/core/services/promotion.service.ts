@@ -17,7 +17,7 @@ export class PromotionService {
     }
 
     getTotalPage() {
-        return this.http.get<number>(this.baseUrl + `/Responsable/PNumbers`)
+        return this.http.get<number>(this.baseUrl + `Responsable/PNumbers`)
     }
 
     createPromotion(promotion: Promotion) {
