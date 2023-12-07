@@ -1,1 +1,23 @@
-<p>add-promontion works!</p>
+<div class="container">
+    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Add new promotion</h2>
+    <div class="my-14 bg-gray-50 rounded-2xl p-14 border border-gray-100">
+        <tui-select
+                tuiTextfieldSize="m"
+                class="tui-input tui-space_vertical-4 z-[9999]"
+                [formControl]="testValue"
+                [tuiTextfieldLabelOutside]="true"
+        >
+            Character
+            <input
+                    class="tui-input"
+                    placeholder="Choose your hero"
+                    tuiTextfield
+            />
+            <tui-data-list-wrapper
+                    *tuiDataList
+                    [items]="items"
+            ></tui-data-list-wrapper>
+        </tui-select>
+    </div>
+
+</div>

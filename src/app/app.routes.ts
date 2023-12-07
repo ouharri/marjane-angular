@@ -2,7 +2,7 @@ import {Routes} from '@angular/router';
 import {TestComponent} from "./shared/components/test/test.component";
 import {LoginComponent} from "./pages/authentication/login/login.component";
 import {RegisterComponent} from "./pages/authentication/register/register.component";
-import {AddPromotionComponent} from "./pages/admin/add-promotion/add-promotion.component";
+import {PromotionComponent} from "././pages/admin/promotion/promotion.component";
 import {HomeComponent} from "./pages/admin/home/home.component";
 
 export const routes: Routes = [
@@ -21,9 +21,10 @@ export const routes: Routes = [
     {
         path: 'admin',
         component: HomeComponent,
-        children: [
-            {path: 'add-promotion', component: AddPromotionComponent}
-        ],
+    },
+    {
+        path: 'admin/promotion',
+        component: PromotionComponent
     },
     {
         path: '',
