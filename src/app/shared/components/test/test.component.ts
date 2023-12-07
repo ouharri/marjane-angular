@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {TuiDay, TuiDayRange, TuiMonth} from '@taiga-ui/cdk';
 import {NgIf} from "@angular/common";
 import {TuiCalendarModule} from "@taiga-ui/core";
+import {SideBarComponent} from "../side-bar/side-bar.component";
 
 @Component({
   standalone: true,
@@ -9,7 +10,8 @@ import {TuiCalendarModule} from "@taiga-ui/core";
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     NgIf,
-    TuiCalendarModule
+    TuiCalendarModule,
+    SideBarComponent
   ]
 })
 export class TestComponent {

@@ -1,0 +1,105 @@
+<div id="sideBar"
+     [class]="IsOpen ? 'w-60 bg-[#012A36] border border-gray-700' : 'bg-[#0155a7] dark:bg-[#012A36] w-[60px] my-[0.5vh] h-[99vh] ml-[0.5vh] rounded-3xl'"
+     class="transition-all duration-300 ease-linear flex flex-col h-screen p-2 top-0 px-2 relative text-white">
+    <div class="flex flex-col items-center mt-6 -mx-2">
+        <img
+                [src]="IsOpen ? 'assets/images/logo.png' : 'https://www.marjane.ma/images/logo-marjane-mobile.png'"
+                [class]="IsOpen? 'image mx-4 w-44' : 'image mx-2 object-cover h-9 w-9'" alt="Avatar"/>
+    </div>
+
+    <div class="flex-1" [class]="IsOpen ? 'mt-16' : 'mt-7'">
+        <div class="h-full flex flex-col justify-between" [class]="IsOpen? '' : 'items-center'">
+            <div>
+                <a [class]="IsOpen ? 'pl-5' : 'px-2'"
+                   class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 color-[#ffe804]"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24"
+                         stroke-width="2" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M13 5h8"></path>
+                        <path d="M13 9h5"></path>
+                        <path d="M13 15h8"></path>
+                        <path d="M13 19h5"></path>
+                        <path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                    </svg>
+
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Crédits</span>
+                </a>
+                <a href="?p=Dashboard&pd=clients" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                   class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                    </svg>
+
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Clients</span>
+                </a>
+                <a href="?p=Dashboard&pd=product" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                   class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-5 h-5 ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path>
+                    </svg>
+
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Employés</span>
+                </a>
+                <a href="?p=home" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                   class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+                    </svg>
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Home</span>
+                </a>
+            </div>
+            <div>
+                <div routerLink="/test" [class]="IsOpen ? 'pl-5' : ''"
+                     class="flex items-center mt-5 transition-colors duration-300 transform rounded-lg">
+                    <img src="https://avatars.githubusercontent.com/u/112892545" class="w-10 object-cover rounded-full"
+                         alt="ouharri">
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Ouharri Outman</span>
+                </div>
+                <a (click)="navigateTo('/test')" [class]="IsOpen ? 'pl-5' : 'px-2'"
+                   class="flex items-center py-2 mt-5 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         [class]="IsOpen ? '' : 'stroke-[#ffe804]'" width="24" height="24"
+                         stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="#ffe804" stroke-linejoin="#ffe804"
+                              d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"></path>
+                    </svg>
+                    <span class="mx-4 font-medium" [class]="IsOpen ? '' : 'hidden'">Logout</span>
+                </a>
+                <div [class]="IsOpen? 'bottom-6' : 'bottom-32'"
+                     class="absolute right-0 opacity-70 bg-gray-600 dark:bg-gray-600 z-50 cursor-pointer pl-2 rounded-l-full hidden md:block">
+                    <a
+                            class="h-full items-center w-full transition-colors duration-150">
+                        <div *ngIf="IsOpen">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" aria-hidden="true"
+                                 fill="currentColor" (click)="toggle()"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="1" viewBox="0 0 24 24" stroke="none">
+                                <path d="m12.707 7.707-1.414-1.414L5.586 12l5.707 5.707 1.414-1.414L8.414 12z"></path>
+                                <path d="M16.293 6.293 10.586 12l5.707 5.707 1.414-1.414L13.414 12l4.293-4.293z"></path>
+                            </svg>
+                        </div>
+                        <div *ngIf="!IsOpen">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" aria-hidden="true"
+                                 fill="currentColor" (click)="toggle()"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="1" viewBox="0 0 24 24" stroke="none">
+                                <path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path>
+                                <path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -33,7 +33,7 @@ import {initFlowbite} from 'flowbite';
     TuiToggleModule,
     ReactiveFormsModule,
     TuiDialogModule,
-    TuiAlertModule
+    TuiAlertModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
