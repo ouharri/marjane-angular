@@ -22,6 +22,12 @@ export const routes: Routes = [
     {
         path: 'admin',
         component: HomeComponent,
+        children: [
+            {
+                path: '',
+                component: HomeComponent,
+            }
+        ]
     },
     {
         path: 'admin/promotion',

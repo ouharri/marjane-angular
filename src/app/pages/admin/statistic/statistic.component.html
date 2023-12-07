@@ -1,1 +1,72 @@
-<p>statistic works!</p>
+<section>
+    <div class="flex flex-col">
+        <label class="block text-sm ml-16" for="statistic">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Statistic :</h2>
+        </label>
+        <div class="flex flex-col gap-16">
+            <div class="flex flex-col sm:flex-row justify-evenly" id="statistic">
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">Total des promention refusé</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.refuse }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                </div>
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">Totale des promention validée</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.valide }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0">
+                        <canvas id="percentAccepter" height="70" width="102%"></canvas>
+                    </div>
+                </div>
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">Total des promention en coure de
+                            validation</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.enCours }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0">
+                        <canvas id="categories" height="70" width="102%"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-evenly" id="statistic2">
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">pourcentage des promention
+                            accepter</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.percentAccepter }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0">
+                        <canvas id="refuse" height="70" width="102%"></canvas>
+                    </div>
+                </div>
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">Total des produit</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.products }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                </div>
+                <div
+                        class="rounded-lg border border-gray-200 w-[350px] dark:border-gray-700 bg-gradient-to-tr from-white  dark:from-gray-800 dark:to-gray-800 to-transparent dark:text-gray-200 transition duration-700 ease-in-out  relative overflow-hidden">
+                    <div class="px-3 pt-8 pb-10 text-center relative z-10">
+                        <h4 class="text-sm uppercase text-gray-500 leading-tight">Total des categorie</h4>
+                        <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">{{ static.categories }}</h3>
+                        <p class="text-xs text-green-500 leading-tight"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
