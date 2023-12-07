@@ -1,0 +1,21 @@
+<div class="wrapper flex">
+    <tui-calendar
+            [maxViewedMonth]="firstMonth"
+            [month]="firstMonth"
+            [showAdjacent]="false"
+            [value]="value"
+            [(hoveredItem)]="hoveredItem"
+            (dayClick)="onDayClick($event)"
+            (monthChange)="onMonthChangeFirst($event)"
+    ></tui-calendar>
+    <tui-calendar
+            [minViewedMonth]="lastMonth"
+            [month]="lastMonth"
+            [showAdjacent]="false"
+            [value]="value"
+            [(hoveredItem)]="hoveredItem"
+            (dayClick)="onDayClick($event)"
+            (monthChange)="onMonthChangeLast($event)"
+    ></tui-calendar>
+</div>
+<div *ngIf="value">Chosen dates: {{ value }}</div>

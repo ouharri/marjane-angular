@@ -53,6 +53,7 @@ export class PromotionComponent implements OnInit {
         this.getAllPromotions();
     }
 
+    loopArray = new Array(0);
     promotions: Promotion[] = []
     totalPage: number = 0;
 
@@ -73,6 +74,7 @@ export class PromotionComponent implements OnInit {
     getTotalPage() {
         this.promotion.getTotalPage().subscribe((data: any) => {
             this.totalPage = data;
+            this.loopArray = new Array(this.totalPage);
         });
     }
 
