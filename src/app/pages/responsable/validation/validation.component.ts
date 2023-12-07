@@ -116,8 +116,33 @@ export class ValidationComponent {
         });
     }
 
-    refuserPromontion(promotion : Promotion) {
-        console.log(promotion)
+    refuserPromontion(p: Promotion) {
+        if (p.status == "Refusé") {
+            this.alerts.open('', {
+                label: 'Already Refused',
+                status: 'warning',
+                autoClose: true,
+            }).subscribe();
+            return;
+        }
+        Swal.fire({
+            title: "Are you sure?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#0155a7",
+            cancelButtonColor: "#dd0100",
+            confirmButtonText: "Yes, Accept!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                this.resp.acceptPromotion(p.idPr);
+                this.getPromotionsByPage();
+                this.alerts.open('', {
+                    label: 'Successfully Refused',
+                    status: 'success',
+                    autoClose: true,
+                }).subscribe();
+            }
+        });
     }
 
     private getAllCategories() {

@@ -15,4 +15,8 @@ export class ResponsableRayonService {
     acceptPromotion(promotion: number) {
         this.http.post(this.baseUrl + `Responsable/promo`, promotion).subscribe();
     }
+
+    refusePromotion(promotion: number) {
+        this.http.post(this.baseUrl + `Responsable/refus`, promotion).subscribe();
+    }
 }
