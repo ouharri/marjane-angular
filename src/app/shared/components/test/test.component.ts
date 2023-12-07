@@ -21,9 +21,7 @@ export class TestComponent {
 
     firstMonth = TuiMonth.currentLocal();
 
-    middleMonth = TuiMonth.currentLocal().append({month: 1});
-
-    lastMonth = TuiMonth.currentLocal().append({month: 2});
+    lastMonth = TuiMonth.currentLocal().append({month: 1});
 
     hoveredItem: TuiDay | null = null;
 
@@ -47,19 +45,16 @@ export class TestComponent {
 
     onMonthChangeFirst(month: TuiMonth): void {
         this.firstMonth = month;
-        this.middleMonth = month.append({month: 1});
-        this.lastMonth = month.append({month: 2});
+        this.lastMonth = month.append({month: 1});
     }
 
     onMonthChangeMiddle(month: TuiMonth): void {
         this.firstMonth = month.append({month: -1});
-        this.middleMonth = month;
         this.lastMonth = month.append({month: 1});
     }
 
     onMonthChangeLast(month: TuiMonth): void {
-        this.firstMonth = month.append({month: -2});
-        this.middleMonth = month.append({month: -1});
+        this.firstMonth = month.append({month: -1});
         this.lastMonth = month;
     }
 }

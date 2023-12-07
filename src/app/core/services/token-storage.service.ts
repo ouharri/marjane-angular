@@ -1,5 +1,5 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {AuthenticationPersist} from '../dto/authentication-persist';
+import {AuthenticationPersist} from '../model/authentication-persist';
 import {jwtDecode} from "jwt-decode";
 
 @Injectable({

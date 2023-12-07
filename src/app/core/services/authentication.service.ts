@@ -2,9 +2,9 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {TokenStorage} from './token-storage.service';
-import {RegisterRequest} from '../dto/register-request';
-import {AuthenticationResponse} from '../dto/authentication-response';
-import {LoginRequest} from "../dto/login-request";
+import {RegisterRequest} from '../model/register-request';
+import {AuthenticationResponse} from '../model/authentication-response';
+import {LoginRequest} from "../model/login-request";
 import {catchError} from 'rxjs/operators';
 
 @Injectable({

@@ -1,23 +1,40 @@
-<div class="container">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Add new promotion</h2>
-    <div class="my-14 bg-gray-50 rounded-2xl p-14 border border-gray-100">
-        <tui-select
-                tuiTextfieldSize="m"
-                class="tui-input tui-space_vertical-4 z-[9999]"
-                [formControl]="testValue"
-                [tuiTextfieldLabelOutside]="true"
-        >
-            Character
-            <input
-                    class="tui-input"
-                    placeholder="Choose your hero"
-                    tuiTextfield
-            />
-            <tui-data-list-wrapper
-                    *tuiDataList
-                    [items]="items"
-            ></tui-data-list-wrapper>
-        </tui-select>
+<div class="">
+    <div class="flex flex-col items-center justify-center mx-auto">
+        <div class="w-full px-20">
+            <label class="block text-sm" for="category">
+                <h2 class="my-6 text-2xl font-semibold text-yellow-300 dark:text-gray-200">Promotion category :</h2>
+            </label>
+            <tui-select
+                    tuiTextfieldSize="m"
+                    class="tui-input tui-space_vertical-4 w-full"
+                    [formControl]="displayValue"
+                    [tuiTextfieldLabelOutside]="true"
+            >
+                Chose the promotion category
+                <input
+                        id="category"
+                        class="tui-input"
+                        placeholder="Choose your hero"
+                        tuiTextfield
+                />
+                <tui-data-list-wrapper
+                        *tuiDataList
+                        [items]="items"
+                ></tui-data-list-wrapper>
+            </tui-select>
+        </div>
+        <div>
+            <label class="block text-sm" for="interval">
+                <h2 class="my-6 text-2xl font-semibold text-yellow-300 dark:text-gray-200">Promotion interval :</h2>
+            </label>
+            <app-calendar (statDateChange)="setStartDate($event)" (endDateChange)="setEndDate($event)" id="interval"></app-calendar>
+        </div>
+    </div>
+    <div class="flex justify-between">
+        <div></div>
+        <button class="btn border-0 mt-8 hover:bg-yellow-300 bg-[#0155a7] text-white" (click)="addPromotion()">Add
+            promotion
+        </button>
     </div>
 
 </div>
